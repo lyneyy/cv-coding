@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CVTemplateWow.css">
+  <title>CV Template Form</title>
+</head>
+<body>
+<script src="https://kit.fontawesome.com/b99e675b6e.js"> 
+  
+</script>
+
+<style> 
+  textarea {
+  resize: none;
+  } </style>
+
+<div class="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+     <div class="---">
+                  <div class="---">
+                  <div id="imageContainer" onclick="selectImage()"> 
+                  </div>
+                  <input type="file" id="imageInput" accept="image/*" onchange="displayImage(event)" />
+
+                  </div>
+     </div>
+   </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+
+         <div class="title">
+           <textarea type="text" id="title1" rows="3" cols="32"   placeholder="Full Name"></textarea>
+           <div id="content_title1" style="display: none;"></div>
+         </div>
+
+
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fas fa-map-signs"></i>
+             </div>
+
+
+             <div class="data">
+               <textarea type="text" id="title2" rows="1" cols="25"   placeholder="Address"></textarea>
+               <div id="content_title2" style="display: none; margin-top: 20px;"></div> <br/>
+             </div>
+
+
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-mobile-alt"></i>
+             </div>
+
+
+             <div class="data">
+              <textarea type="text" id="title3" rows="1" cols="25"   placeholder="Phone Number"></textarea>
+               <div id="content_title3" style="display: none; margin-top: 20px;"></div> <br/>
+             </div>
+
+
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-envelope"></i>
+             </div>
+
+
+             <div class="data">
+               <textarea type="text" id="title4" rows="1" cols="25" placeholder="E-Mail"></textarea>
+               <div id="content_title4" style="display: none; margin-top: 20px;"></div> <br/>
+             </div>
+
+
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-weebly"></i>
+             </div>
+
+
+             <div class="data">
+             <textarea type="text" id="title5" rows="1" cols="25"   placeholder="Website"></textarea>
+               <div id="content_title5" style="display: none; margin-top: 20px;"></div> <br/>
+             </div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">skills</p>
+         </div>
+         <ul>
+           <li>
+             <div class="skill_name">
+               HTML
+             </div>
+
+
+             <div class="skill_progress">
+               <span style="width: 0%;"></span>
+             </div>
+             <div>
+              <input type="text" id="html_percentage" style="width: 30px; height: 20px;" placeholder="%" placeholder="Enter percentage" onchange="updateSkillPercentage('html_percentage', this)">
+           </li>
+
+
+           <li>
+             <div class="skill_name">
+               CSS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 0%;"></span>
+             </div>
+             <input type="text" id="css_percentage" style="width: 30px; height: 20px;" placeholder="%" placeholder="Enter percentage" onchange="updateSkillPercentage('css_percentage', this)">
+           </li>
+           <li>
+             <div class="skill_name">
+               PHP
+             </div>
+             <div class="skill_progress">
+               <span style="width: 0%;"></span>
+             </div>
+             <input type="text" id="php_percentage" style="width: 30px; height: 20px;" placeholder="%" placeholder="Enter percentage" onchange="updateSkillPercentage('php_percentage', this)">
+           </li>
+           <li>
+             <div class="skill_name">
+               Java
+             </div>
+             <div class="skill_progress">
+               <span style="width: 0%;"></span>
+             </div>
+             <input type="text" id="java_percentage" style="width: 30px; height: 20px;" placeholder="%" placeholder="Enter percentage" onchange="updateSkillPercentage('java_percentage', this)">
+           </li>
+           <li>
+             <div class="skill_name">
+               Python
+             </div>
+             <div class="skill_progress">
+               <span style="width: 0%;"></span>
+             </div>
+             <input type="text" id="python_percentage" style="width: 30px; height: 20px;" placeholder="%" placeholder="Enter percentage" onchange="updateSkillPercentage('python_percentage', this)">
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Social</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fab fa-facebook-square"></i>
+             </div>
+
+
+             <div class="data">
+               <p class="semi-bold">Facebook</p>
+               <textarea type="text" id="facebook_content" rows="1" cols="25" placeholder="Username"></textarea>
+               <div id="facebook_content" style="display: none; "></div> <br/>
+             </div>
+
+
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-twitter-square"></i>
+             </div>
+
+
+             <div class="data">
+               <p class="semi-bold">Twitter</p>
+               <textarea type="text" id="twitter_content" rows="1" cols="25"   placeholder="Username"></textarea>
+               <div id="twitter_content" style="display: none; "></div> <br/>
+             </div>
+
+
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-youtube"></i>
+             </div>
+
+
+             <div class="data">
+               <p class="semi-bold">Youtube</p>
+               <textarea type="text" id="youtube_content" rows="1" cols="25"   placeholder="Username"></textarea>
+               <div id="youtube_content" style="display: none; "></div> <br/>
+             </div>
+
+
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-linkedin"></i>
+             </div>
+
+
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <textarea type="text" id="linkedin_content" rows="1" cols="25"   placeholder="Username"></textarea>
+               <div id="linkedin_content" style="display: none; "></div> <br/>
+             </div>
+
+
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">About Me</p>
+         </div>
+         <textarea type="text" id="aboutmee" rows="4" cols="60"   placeholder="Description"></textarea>
+         <div id="content_aboutmee" style="display: none; "></div> <br/>
+    </div>
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Work Experience</p>
+         </div>
+        <ul>
+
+
+            <li>
+                <textarea type="text" id="year" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_year" style="display: none; "></div> <br/>
+                <div class="info">
+                <textarea type="text" id="workplacez" rows="1" cols="28"   placeholder="Work Place"></textarea>
+               <div id="content_wirr" style="display: none; "></div> <br/>
+                      <textarea type="text" id="Description" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_desc" style="display: none; "></div> <br/>
+                </div>
+            </li>
+
+
+            <li>
+              <textarea type="text" id="year1" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_year1" style="display: none; "></div> <br/>
+                <div class="info">
+                <textarea type="text" id="workplace1" rows="1" cols="28"   placeholder="Work Place"></textarea>
+               <div id="content_wk1" style="display: none; "></div> <br/>
+                <textarea type="text" id="Description1" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_desc1" style="display: none; "></div> <br/>
+                </div>
+            </li>
+
+
+            <li>
+              <textarea type="text" id="year2" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_year2" style="display: none; "></div> <br/>
+                <div class="info">
+                      <textarea type="text" id="workplace2" rows="1" cols="28"   placeholder="Work Place"></textarea>
+               <div id="content_wk2" style="display: none; "></div> <br/>
+                      <textarea type="text" id="Description2" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_desc2" style="display: none; "></div> <br/>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">Education</p>
+         </div>
+      <ul>
+            <li>
+                <textarea type="text" id="edu" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_edu" style="display: none; "></div> <br/>
+                <div class="info">
+                      <textarea type="text" id="kucing" rows="1" cols="28"   placeholder="School"></textarea>
+               <div id="content_kucing" style="display: none; "></div> <br/>
+                      <textarea type="text" id="edudu3" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_edudu3" style="display: none; "></div> <br/>
+                </div>
+            </li>
+
+
+            <li>
+               <textarea type="text" id="cicak" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_cicak" style="display: none; "></div> <br/>
+                <div class="info">
+                      <textarea type="text" id="title" rows="1" cols="28"   placeholder="School"></textarea>
+               <div id="content_aboutme" style="display: none; "></div> <br/>
+                      <textarea type="text" id="title" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_aboutme" style="display: none; "></div> <br/>
+            </li>
+
+
+           <li>
+               <textarea type="text" id="kambing" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_kambing" style="display: none; "></div> <br/>
+                <div class="info">
+                      <textarea type="text" id="title" rows="1" cols="28"   placeholder="School"></textarea>
+               <div id="content_aboutme" style="display: none; "></div> <br/>
+                      <textarea type="text" id="title" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_aboutme" style="display: none; "></div> <br/>
+
+
+            <li>
+              <textarea type="text" id="gajah" rows="1" cols="25"   placeholder="Year"></textarea>
+               <div id="content_gajah" style="display: none; "></div> <br/>
+                <div class="info">
+                      <textarea type="text" id="title" rows="1" cols="28"   placeholder="School"></textarea>
+               <div id="content_aboutme" style="display: none; "></div> <br/>
+                      <textarea type="text" id="title" rows="3" cols="54"   placeholder="Description"></textarea>
+               <div id="content_aboutme" style="display: none; "></div> <br/>
+            </li>
+
+        </ul>
+    </div>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="JavaCVKolab.js"></script>
+
+<div class="content_button">
+               <button type="button" id="button_id" onclick="submitForm()">Submit</button>
+            </div>
+
+</body>
+  </html>
